@@ -1,0 +1,8 @@
+#{extends 'main.html' /}
+#{set title:'Dashboard' /}
+
+#{menu id:"dashboard", gymname:"Play Gym", href:"/dashboard", icon:"user icon" /}
+
+#{showanalytics member:member, returnAnalytics:returnAnalytics /}
+#{addassessment /}
+#{listassessments member:member /}

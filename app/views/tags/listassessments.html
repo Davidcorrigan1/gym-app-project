@@ -1,0 +1,61 @@
+<table class="ui celled padded table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Weight</th>
+      <th>Chest</th>
+      <th>Thigh</th>
+      <th>Upper Arm</th>
+      <th>Waist</th>
+      <th>Hips</th>
+      <th>Trend</th>
+      <th>Comment</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    #{list items:_member.assessments, as:'assessment'}
+      <tr>
+        <td>
+          ${assessment.dateTime}
+        </td>
+        <td>
+          ${assessment.weight}
+        </td>
+        <td>
+          ${assessment.chest}
+        </td>
+        <td>        
+          ${assessment.thigh}
+        </td>      
+        <td>
+          ${assessment.upperArm}
+        </td>
+        <td>
+          ${assessment.waist}
+        </td>
+        <td>
+          ${assessment.hips}
+        </td>
+        <td>
+          #{if (assessment.weightIncrease == +1)}
+            <i class="red large chevron circle up icon"></i>
+          #{/if}
+          #{elseif (assessment.weightIncrease == -1)}
+            <i class="green large chevron circle down icon"></i>
+          #{/elseif}
+          #{else}
+            <i class="blue large chevron circle right icon"></i>
+          #{/else}
+        </td>
+        <td>
+          ${assessment.comment}
+        </td>
+        <td>
+          <a href="/members/${_member.id}/deleteassessment/${assessment.id}" class="ui icon button">
+            <i class="trash alternate outline icon"></i>
+        </td>
+      </tr>
+    #{/list}
+  </tbody>
+</table>

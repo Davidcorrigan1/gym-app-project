@@ -1,0 +1,11 @@
+.settings
+eclipse
+documentation
+tmp
+.classpath
+.project
+.idea
+playlist.iml
+*.iml
+*.ipr
+*.iws

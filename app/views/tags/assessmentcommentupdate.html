@@ -1,0 +1,47 @@
+<table class="ui fixed table">
+    <thead>
+    <tr>
+        <th>Weight</th>
+        <th>Chest</th>
+        <th>Thigh</th>
+        <th>Upper Arm</th>
+        <th>Waist</th>
+        <th>Hips</th>
+        <th>Comment</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+        ${_assessment.weight}
+        </td>
+        <td>
+        ${_assessment.chest}
+        </td>
+        <td>
+        ${_assessment.thigh}
+        </td>
+        <td>
+        ${_assessment.upperArm}
+        </td>
+        <td>
+        ${_assessment.waist}
+        </td>
+        <td>
+        ${_assessment.hips}
+        </td>
+        <td>
+        ${_assessment.comment}
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<form class="ui form" action="/memberdashboard/addcomment/${_member.id}/${_assessment.id}" method="POST">
+    <div class="field">
+        <label>Comment</label>
+        <input type="text" name="comment">
+    </div>
+    <button class="ui blue submit button">Update</button>
+</form>

@@ -1,0 +1,16 @@
+<table class="ui fixed table">
+    <tbody class="ui centered aligned">
+    <tr>
+        <th class="center aligned"><i class="huge blue user icon"></i> <BR>   ${_member.memberName}</th>
+        <th class="center aligned">
+            #{if (_returnAnalytics.idealWeight == true)}
+                <i class="huge green balance scale left icon"></i>
+            #{/if}
+            #{else}
+                <i class="huge red balance scale left icon"></i>
+            #{/else} <BR> IDEAL WEIGHT INDICATOR</th>
+        <th class="center aligned"><i class="huge blue heartbeat icon"></i> ${_returnAnalytics.BMI} <BR> BMI</th>
+        <th class="center aligned"><i class="huge blue doctor icon"></i> <BR> ${_returnAnalytics.bmicategory} </th>
+    </tr>
+    </tbody>
+</table>
