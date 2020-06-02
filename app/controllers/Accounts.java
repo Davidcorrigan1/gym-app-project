@@ -28,7 +28,7 @@ public class Accounts extends Controller
         if (!memberName.isEmpty() && !gender.isEmpty() && !email.isEmpty() && !password.isEmpty() && height > 0 && startingWeight > 0)
         {
             Logger.info("Registering new user " + email);
-            Member member = new Member(memberName, gender, email, password, address, height, startingWeight);
+            Member member = new Member(memberName, gender, email.toLowerCase(), password, address, height, startingWeight);
             member.save();
             redirect("/");
         } else {
@@ -61,7 +61,7 @@ public class Accounts extends Controller
             member.setGender(gender);
         }
         if (!email.isEmpty()) {
-            member.setEmail(email);
+            member.setEmail(email.toLowerCase());
         }
         if (!password.isEmpty()){
             member.setPassword(password);
@@ -90,8 +90,8 @@ public class Accounts extends Controller
     {
         Logger.info("Attempting to authenticate with " + email + ":" + password);
 
-        Member member = Member.findByEmail(email);
-        Trainer trainer = Trainer.findByEmail(email);
+        Member member = Member.findByEmail(email.toLowerCase());
+        Trainer trainer = Trainer.findByEmail(email.toLowerCase());
         if ((member != null) && member.checkPassword(password)) {
             Logger.info("Member Authentication successful");
             session.put("logged_in_Memberid", member.id);
