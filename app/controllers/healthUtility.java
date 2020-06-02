@@ -64,7 +64,7 @@ public class healthUtility {
      */
     public static boolean isIdealBodyWeight(Member member, Assessment assessment) {
         double idealWeight;
-        if (member.getGender().toLowerCase().equals("m")) {
+        if (member.getGender().toLowerCase().equals("male") || member.getGender().toLowerCase().equals("m")) {
             idealWeight = (50 + (2.3 * (convertMetersToInches(member.getHeight()) - 60)));
         } else {
             idealWeight = (45.5 + (2.3 * (convertMetersToInches(member.getHeight()) - 60)));

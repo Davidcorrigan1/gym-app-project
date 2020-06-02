@@ -1,6 +1,6 @@
 Assessment(a1):
   dateTime: 2020/05/30 09:00
-  weight: 43
+  weight: 86
   chest: 34
   thigh: 23
   upperArm: 12
@@ -11,18 +11,7 @@ Assessment(a1):
 
 Assessment(a2):
   dateTime: 2020/05/15 09:00
-  weight: 43
-  chest: 34
-  thigh: 23
-  upperArm: 12
-  waist: 40
-  hips: 23
-  comment:
-  weightIncrease: -1
-
-Assessment(a3):
-  dateTime: 2020/05/05 09:00
-  weight: 43
+  weight: 85
   chest: 34
   thigh: 23
   upperArm: 12
@@ -31,9 +20,20 @@ Assessment(a3):
   comment:
   weightIncrease: 0
 
+Assessment(a3):
+  dateTime: 2020/05/05 09:00
+  weight: 85
+  chest: 34
+  thigh: 23
+  upperArm: 12
+  waist: 40
+  hips: 23
+  comment:
+  weightIncrease: -1
+
 Assessment(a4):
   dateTime: 2020/05/23 09:00
-  weight: 43
+  weight: 73
   chest: 34
   thigh: 23
   upperArm: 12
@@ -44,7 +44,7 @@ Assessment(a4):
 
 Assessment(a5):
   dateTime: 2020/05/13 09:00
-  weight: 43
+  weight: 70
   chest: 34
   thigh: 23
   upperArm: 12
@@ -61,10 +61,10 @@ Trainer(t1):
 Member(m1):
   memberName: David Corrigan
   gender: Male
-  email: davidcorrigan2@gmail.com
+  email: davidcorrigan@gmail.com
   password: Pass1976
   address: Killincooley
-  height: 1.50
+  height: 1.70
   startingWeight: 90
   assessments:
     - a1
@@ -77,7 +77,7 @@ Member(m2):
   email: joshuacorrigan@gmail.com
   password: Pass1976
   address: Killincooley
-  height: 1.50
+  height: 1.60
   startingWeight: 75
   assessments:
     - a4
